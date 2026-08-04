@@ -1,5 +1,6 @@
 import { PredictionRequest, PredictionResponse } from '../types/prediction';
 
+// @ts-ignore
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
 export const predictHousePrice = async (data: PredictionRequest): Promise<PredictionResponse> => {

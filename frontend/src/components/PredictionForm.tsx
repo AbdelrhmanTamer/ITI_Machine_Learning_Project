@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { PredictionRequest } from '../types/prediction';
 import { predictHousePrice } from '../api/predictionClient';
 import encodingDict from '../data/encoding_dict.json';
-import { Home, IndianRupee, MapPin, Building, Key, Compass, Sofa, Ruler, Hash, Bath, Square, CarFront } from 'lucide-react';
+import { Home, IndianRupee, MapPin, Building, Ruler, Hash, Bath, Square, CarFront } from 'lucide-react';
 
 const locations = Object.keys(encodingDict.location_clean).sort();
 const societies = Object.keys(encodingDict.Society_clean).sort();

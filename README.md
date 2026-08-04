@@ -58,7 +58,7 @@ Because the trained Random Forest model is over 200MB, it is not included in thi
 cd backend
 python -m venv .venv
 # Activate virtual environment (Windows)
-.\.venv\Scripts\Activate.ps1
+.venv\Scripts\activate
 # Activate virtual environment (Mac/Linux)
 source .venv/bin/activate
 

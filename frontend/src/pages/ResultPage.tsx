@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Home, IndianRupee } from 'lucide-react';
+import { ArrowLeft, IndianRupee } from 'lucide-react';
 import '../index.css';
 
 export default function ResultPage() {
