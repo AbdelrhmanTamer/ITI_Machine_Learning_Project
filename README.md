@@ -120,6 +120,11 @@ The chosen model for this project is a **Random Forest Regressor**, which outper
 
 ## 📸 Screenshots
 
-*(Replace the placeholder below with actual screenshots of your running application before submitting!)*
+### Empty Form
+![Empty Form](screenshots/form_empty.png)
 
-![Frontend App Screenshot](frontend/screenshot_placeholder.png)
+### Filled Form
+![Filled Form](screenshots/form_filled.png)
+
+### Prediction Result
+![Prediction Result](screenshots/result.png)
