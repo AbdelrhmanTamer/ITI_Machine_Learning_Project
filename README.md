@@ -41,11 +41,19 @@ The model was trained on a custom Indian house prices dataset.
 * **How to Download**: 
   1. Click the link above to access the dataset.
   2. Click the "Download" button to get the `.csv` file.
-  3. *(Note: The dataset is not included in this repository due to its large size).*
+  3. Place the downloaded `.csv` file into the `notebooks/data/` folder.
+  4. *(Note: The dataset is not included in this repository due to its large size).*
 
 ## 🚀 Setup Instructions
 
-### 1. Backend Setup
+### 1. Generate the Machine Learning Model
+Because the trained Random Forest model is over 200MB, it is not included in this repository. You must generate it yourself:
+1. Ensure you have downloaded the dataset into the `notebooks/data/` folder.
+2. Open the `notebooks/house_price_model.ipynb` file in Jupyter Notebook, VS Code, or Google Colab.
+3. Run all cells in the notebook.
+4. This will generate a `house_price_model.pkl` file. Copy this file into the `backend/models/` directory and rename it to `house_price.pkl`.
+
+### 2. Backend Setup
 ```bash
 cd backend
 python -m venv .venv
