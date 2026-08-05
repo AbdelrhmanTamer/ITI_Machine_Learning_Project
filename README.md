@@ -52,7 +52,7 @@ First, we need to create a Python virtual environment and install the required d
 cd backend
 python -m venv .venv
 # Activate virtual environment (Windows)
-.\.venv\Scripts\Activate.ps1
+.venv\Scripts\activate
 # Activate virtual environment (Mac/Linux)
 source .venv/bin/activate
 
