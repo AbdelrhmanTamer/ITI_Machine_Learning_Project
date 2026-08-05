@@ -51,7 +51,7 @@ Because the trained Random Forest model is over 200MB, it is not included in thi
 1. Ensure you have downloaded the dataset into the `notebooks/data/` folder.
 2. Open the `notebooks/house_price_model.ipynb` file in Jupyter Notebook, VS Code, or Google Colab.
 3. Run all cells in the notebook.
-4. This will generate a `house_price_model.pkl` file. Copy this file into the `backend/models/` directory and rename it to `house_price.pkl`.
+4. This will generate a `house_price_model.pkl` file in the notebooks folder. The backend is smart enough to automatically find it there!
 
 ### 2. Backend Setup
 ```bash

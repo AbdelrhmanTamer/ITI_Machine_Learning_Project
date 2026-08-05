@@ -7,7 +7,12 @@ class ModelInference:
         self.model = None
 
     def load_model(self):
-        model_path = os.path.join(os.path.dirname(__file__), '..', '..', 'models', 'house_price.pkl')
+        # First check the models directory, then check the notebooks directory as a fallback
+        primary_path = os.path.join(os.path.dirname(__file__), '..', '..', 'models', 'house_price.pkl')
+        fallback_path = os.path.join(os.path.dirname(__file__), '..', '..', '..', 'notebooks', 'house_price_model.pkl')
+        
+        model_path = primary_path if os.path.exists(primary_path) else fallback_path
+
         if os.path.exists(model_path):
             # Suppress unpickling warnings for scikit-learn version differences
             import warnings
@@ -15,7 +20,7 @@ class ModelInference:
                 warnings.simplefilter("ignore")
                 self.model = joblib.load(model_path)
         else:
-            print(f"Warning: Model file not found at {model_path}")
+            print(f"Warning: Model file not found at {primary_path} or {fallback_path}")
 
     def predict(self, df: pd.DataFrame) -> float:
         if self.model is None:
