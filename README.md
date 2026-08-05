@@ -50,7 +50,8 @@ The model was trained on a custom Indian house prices dataset.
 First, we will create a virtual environment in the root folder specifically to run the Jupyter Notebook and train the model.
 ```bash
 # Create and activate a virtual environment for the notebook
-python -m venv .venv
+python3 -m venv .venv
+py -m venv .venv
 .\.venv\Scripts\activate      # For Windows
 # source .venv/bin/activate   # For Mac/Linux
 
@@ -66,7 +67,8 @@ Once installed:
 Now we will set up the backend server in its own isolated environment. Open a **new terminal** and run:
 ```bash
 cd backend
-python -m venv .venv
+python3 -m venv .venv
+py -m venv .venv
 .\.venv\Scripts\activate      # For Windows
 # source .venv/bin/activate   # For Mac/Linux
 
