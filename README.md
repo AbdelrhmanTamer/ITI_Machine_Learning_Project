@@ -46,6 +46,11 @@ The model was trained on a custom Indian house prices dataset.
 
 ## 🚀 Setup Instructions
 
+### ⚠️ Prerequisites
+Before starting, ensure you have the following installed on your computer:
+* [Python (v3.10+)](https://www.python.org/downloads/) - Required to run the machine learning model and backend.
+* [Node.js (v18+)](https://nodejs.org/) - Required to install and run the React frontend.
+
 ### 1. Generate the Machine Learning Model (Notebook Setup)
 First, we will create a virtual environment in the root folder specifically to run the Jupyter Notebook and train the model.
 ```bash
