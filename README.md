@@ -50,7 +50,8 @@ The model was trained on a custom Indian house prices dataset.
 First, we need to create a Python virtual environment and install the required dependencies (which are needed for both the notebook and the backend API).
 ```bash
 cd backend
-python -m venv .venv
+python3 -m venv .venv
+py -m venv .venv
 # Activate virtual environment (Windows)
 .\.venv\Scripts\activate
 # Activate virtual environment (Mac/Linux)
