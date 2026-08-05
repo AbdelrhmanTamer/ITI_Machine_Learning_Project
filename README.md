@@ -46,30 +46,34 @@ The model was trained on a custom Indian house prices dataset.
 
 ## 🚀 Setup Instructions
 
-### 1. Backend Environment Setup
-First, we need to create a Python virtual environment and install the required dependencies (which are needed for both the notebook and the backend API).
+### 1. Generate the Machine Learning Model (Notebook Setup)
+First, we will create a virtual environment in the root folder specifically to run the Jupyter Notebook and train the model.
 ```bash
-cd backend
-python3 -m venv .venv
-py -m venv .venv
-# Activate virtual environment (Windows)
-.\.venv\Scripts\activate
-# Activate virtual environment (Mac/Linux)
-source .venv/bin/activate
+# Create and activate a virtual environment for the notebook
+python -m venv .venv
+.\.venv\Scripts\activate      # For Windows
+# source .venv/bin/activate   # For Mac/Linux
 
+# Install data science dependencies
 pip install -r requirements.txt
 ```
-
-### 2. Generate the Machine Learning Model
-Because the trained Random Forest model is over 200MB, it is not included in this repository. You must generate it yourself:
+Once installed:
 1. Ensure you have downloaded the dataset into the `notebooks/data/` folder.
-2. Open the `notebooks/house_price_model.ipynb` file in Jupyter Notebook, VS Code, or Google Colab. *(If using VS Code, make sure to select the `.venv` you just created as your Python Kernel!)*
-3. Run all cells in the notebook.
-4. This will generate a `house_price_model.pkl` file in the notebooks folder. The backend is smart enough to automatically find it there!
+2. Open the `notebooks/house_price_model.ipynb` file in VS Code or Jupyter. VS Code will now automatically detect this root `.venv`!
+3. Run all cells in the notebook. This will generate a `house_price_model.pkl` file in the notebooks folder.
 
-### 3. Start the Backend API
-While still inside the `backend` folder with your virtual environment activated, run:
+### 2. Backend API Setup
+Now we will set up the backend server in its own isolated environment. Open a **new terminal** and run:
 ```bash
+cd backend
+python -m venv .venv
+.\.venv\Scripts\activate      # For Windows
+# source .venv/bin/activate   # For Mac/Linux
+
+# Install backend API dependencies
+pip install -r requirements.txt
+
+# Start the server
 uvicorn app.main:app --reload
 ```
 
